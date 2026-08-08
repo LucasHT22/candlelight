@@ -1,8 +1,9 @@
-[gd_scene load_steps=29 format=3 uid="uid://155xx7s6y6ta"]
+[gd_scene load_steps=30 format=3 uid="uid://155xx7s6y6ta"]
 
 [ext_resource type="Script" uid="uid://bxn66htsrwnhn" path="res://scripts/tobias.gd" id="1_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://8vtnbcl7c46e" path="res://assets/candle-walk-grid.jpeg" id="2_sugp2"]
 [ext_resource type="FontFile" uid="uid://t3k6vsgfdjrl" path="res://assets/Creepster-Regular.ttf" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://c6yi1i3f6ak22" path="res://scripts/puddle.gd" id="4_jyhfs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sugp2"]
 atlas = ExtResource("2_sugp2")
@@ -174,9 +175,13 @@ font_size = 30
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sugp2"]
 size = Vector2(3539, 361)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbgi4"]
+size = Vector2(11, 20)
+
 [node name="Main" type="Node"]
 
-[node name="Tobias" type="CharacterBody2D" parent="."]
+[node name="Tobias" type="CharacterBody2D" parent="." groups=["player"]]
+collision_mask = 3
 script = ExtResource("1_0wfyh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tobias"]
@@ -220,6 +225,7 @@ label_settings = SubResource("LabelSettings_jyhfs")
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(100, 0)
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 position = Vector2(741.5, 465.5)
@@ -235,9 +241,10 @@ color = Color(0.20880066, 0.10438138, 0.010155321, 1)
 [node name="Ground2" type="StaticBody2D" parent="."]
 position = Vector2(3463.0002, -5)
 scale = Vector2(0.33156213, 1.0101349)
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground2"]
-position = Vector2(-129.45264, 471.50006)
+position = Vector2(-129.45264, 476.44986)
 shape = SubResource("RectangleShape2D_sugp2")
 
 [node name="ColorRect" type="ColorRect" parent="Ground2"]
@@ -262,3 +269,24 @@ offset_right = 3614.0
 offset_bottom = 124.0
 text = "good job... the path home is littered with many challenges"
 label_settings = SubResource("LabelSettings_jyhfs")
+
+[node name="Puddle" type="Area2D" parent="."]
+z_index = 5
+position = Vector2(3442, 228)
+collision_layer = 4
+script = ExtResource("4_jyhfs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puddle"]
+position = Vector2(326, 66.5)
+rotation = 1.5707964
+scale = Vector2(1, 8)
+shape = SubResource("RectangleShape2D_tbgi4")
+
+[node name="ColorRect" type="ColorRect" parent="Puddle"]
+offset_left = 246.0
+offset_top = 61.0
+offset_right = 404.0
+offset_bottom = 72.0
+color = Color(0.24779189, 0.14420357, 0.99999994, 1)
+
+[connection signal="body_entered" from="Puddle" to="Puddle" method="_on_body_entered"]
