@@ -1,8 +1,12 @@
-[gd_scene load_steps=28 format=3 uid="uid://155xx7s6y6ta"]
+[gd_scene load_steps=29 format=3 uid="uid://155xx7s6y6ta"]
 
 [ext_resource type="Script" uid="uid://bxn66htsrwnhn" path="res://scripts/tobias.gd" id="1_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://8vtnbcl7c46e" path="res://assets/candle-walk-grid.jpeg" id="2_sugp2"]
 [ext_resource type="FontFile" uid="uid://t3k6vsgfdjrl" path="res://assets/Creepster-Regular.ttf" id="3_sugp2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sugp2"]
+atlas = ExtResource("2_sugp2")
+region = Rect2(0, 0, 32, 33)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jyhfs"]
 atlas = ExtResource("2_sugp2")
@@ -88,6 +92,14 @@ region = Rect2(128, 99, 32, 33)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_sugp2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_jyhfs")
 }, {
 "duration": 1.0,
@@ -168,9 +180,10 @@ size = Vector2(3539, 361)
 script = ExtResource("1_0wfyh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tobias"]
+position = Vector2(0.99999994, 0)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_0wfyh")
-animation = &"walk"
+animation = &"idle"
 
 [node name="Camera2D" type="Camera2D" parent="Tobias"]
 position_smoothing_enabled = true
