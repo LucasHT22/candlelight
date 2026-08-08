@@ -2,8 +2,11 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -1000.0
+const JUMP_DELAY = 0.5
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+
+var is_jumping := false  # true durante o delay + o pulo em si
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -11,8 +14,8 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	if Input.is_action_just_pressed("jump") and is_on_floor() and not is_jumping:
+		start_jump()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -24,7 +27,20 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-	update_animation(direction)
+	if not is_jumping:
+		update_animation(direction)
+
+
+func start_jump() -> void:
+	is_jumping = true
+	velocity.x = 0  # opcional: trava o movimento durante o "preparo" do pulo
+	animated_sprite.play("jump")
+
+	await get_tree().create_timer(JUMP_DELAY).timeout
+
+	velocity.y = JUMP_VELOCITY
+	is_jumping = false
+
 
 func update_animation(direction: float) -> void:
 	if direction != 0:
