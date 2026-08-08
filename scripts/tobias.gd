@@ -18,22 +18,24 @@ func _physics_process(delta: float) -> void:
 		start_jump()
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("left", "right")
-	if direction:
-		velocity.x = direction * SPEED
+	# Bloqueia movimento horizontal durante o delay do pulo.
+	if not is_jumping:
+		var direction := Input.get_axis("left", "right")
+		if direction:
+			velocity.x = direction * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+
+		update_animation(direction)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = 0
 
 	move_and_slide()
-
-	if not is_jumping:
-		update_animation(direction)
 
 
 func start_jump() -> void:
 	is_jumping = true
-	velocity.x = 0  # opcional: trava o movimento durante o "preparo" do pulo
+	velocity.x = 0
 	animated_sprite.play("jump")
 
 	await get_tree().create_timer(JUMP_DELAY).timeout
@@ -48,9 +50,6 @@ func update_animation(direction: float) -> void:
 			animated_sprite.play("walk")
 		animated_sprite.flip_h = direction < 0
 	elif not is_on_floor():
-		# optional: play a jump/fall animation if you have one
-		# if animated_sprite.animation != "jump":
-		#     animated_sprite.play("jump")
 		pass
 	else:
 		if animated_sprite.animation != "idle":
