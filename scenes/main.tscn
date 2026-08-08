@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://155xx7s6y6ta"]
+[gd_scene load_steps=31 format=3 uid="uid://155xx7s6y6ta"]
 
 [ext_resource type="Script" uid="uid://bxn66htsrwnhn" path="res://scripts/tobias.gd" id="1_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://8vtnbcl7c46e" path="res://assets/candle-walk-grid.jpeg" id="2_sugp2"]
@@ -166,7 +166,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyhfs"]
-size = Vector2(119, 120)
+size = Vector2(97, 112)
 
 [sub_resource type="LabelSettings" id="LabelSettings_jyhfs"]
 font = ExtResource("3_sugp2")
@@ -195,7 +195,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 6.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tobias"]
-position = Vector2(0.5, -1)
+position = Vector2(-10.5, -5)
 shape = SubResource("RectangleShape2D_jyhfs")
 
 [node name="ColorRect" type="ColorRect" parent="."]
