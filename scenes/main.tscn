@@ -168,10 +168,10 @@ tile_set = SubResource("TileSet_tefeu")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
-offset_left = -910.0
-offset_top = -632.0
-offset_right = 2585.0
-offset_bottom = 698.0
+offset_left = -920.0
+offset_top = -715.0
+offset_right = 2575.0
+offset_bottom = 615.0
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
