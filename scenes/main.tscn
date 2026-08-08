@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://155xx7s6y6ta"]
+[gd_scene load_steps=7 format=3 uid="uid://155xx7s6y6ta"]
 
 [ext_resource type="Script" uid="uid://bxn66htsrwnhn" path="res://scripts/tobias.gd" id="1_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_sugp2"]
@@ -7,144 +7,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyhfs"]
 size = Vector2(119, 120)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbgi4"]
-texture = ExtResource("2_sugp2")
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:0/0 = 0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:0/0 = 0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:0/0 = 0
-5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:0/0 = 0
-6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:0/0 = 0
-7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:1/0 = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:1/0 = 0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:1/0 = 0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:1/0 = 0
-4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:1/0 = 0
-5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:1/0 = 0
-6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:1/0 = 0
-7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:2/0 = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:2/0 = 0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:2/0 = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:2/0 = 0
-3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:2/0 = 0
-4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:2/0 = 0
-5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:2/0 = 0
-6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:2/0 = 0
-7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:3/0 = 0
-0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:3/0 = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:3/0 = 0
-2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:3/0 = 0
-3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:3/0 = 0
-4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:3/0 = 0
-5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:3/0 = 0
-6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:3/0 = 0
-7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:4/0 = 0
-0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:4/0 = 0
-1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:4/0 = 0
-2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:4/0 = 0
-3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:4/0 = 0
-4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:4/0 = 0
-5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:4/0 = 0
-6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:4/0 = 0
-7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:5/0 = 0
-0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:5/0 = 0
-1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:5/0 = 0
-2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:5/0 = 0
-3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:5/0 = 0
-4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:5/0 = 0
-5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:5/0 = 0
-6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:5/0 = 0
-7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:6/0 = 0
-0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:6/0 = 0
-1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:6/0 = 0
-2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:6/0 = 0
-3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:6/0 = 0
-4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:6/0 = 0
-5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:6/0 = 0
-6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:6/0 = 0
-7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:7/0 = 0
-0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:7/0 = 0
-1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:7/0 = 0
-2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:7/0 = 0
-3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:7/0 = 0
-4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:7/0 = 0
-5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:7/0 = 0
-6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:7/0 = 0
-7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-
-[sub_resource type="TileSet" id="TileSet_tefeu"]
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_tbgi4")
-
 [sub_resource type="LabelSettings" id="LabelSettings_jyhfs"]
 font = ExtResource("3_sugp2")
 font_size = 30
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sugp2"]
+distance = -95.0
 
 [node name="Main" type="Node"]
 
@@ -161,10 +29,6 @@ texture = ExtResource("2_sugp2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tobias"]
 position = Vector2(0.5, -1)
 shape = SubResource("RectangleShape2D_jyhfs")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AADy/w4AAAADAAAAAADz/w4AAAADAAAAAAD0/w4AAAADAAAAAAD1/w4AAAADAAAAAAD2/w4AAAADAAAAAAD3/w4AAAADAAAAAAD4/w4AAAADAAAAAAD5/w4AAAADAAAAAAD6/w4AAAADAAAAAAD7/w4AAAADAAAAAAD8/w4AAAADAAAAAAD9/w4AAAADAAAAAAD+/w4AAAADAAAAAAD//w4AAAADAAAAAAAAAA4AAAADAAAAAAABAA4AAAADAAAAAAACAA4AAAADAAAAAAADAA4AAAADAAAAAAAEAA4AAAADAAAAAAAFAA4AAAADAAAAAAAGAA4AAAADAAAAAAAHAA4AAAADAAAAAAAIAA4AAAADAAAAAAAJAA4AAAADAAAAAAAKAA4AAAADAAAAAAALAA4AAAADAAAAAAAMAA4AAAADAAAAAAANAA4AAAADAAAAAAAOAA4AAAADAAAAAAAPAA4AAAADAAAAAAAQAA4AAAADAAAAAAARAA4AAAADAAAAAAASAA4AAAADAAAAAAATAA4AAAADAAAAAAAUAA4AAAADAAAAAAAVAA4AAAADAAAAAAAWAA4AAAADAAAAAAAXAA4AAAADAAAAAAAYAA4AAAADAAAAAAAZAA4AAAADAAAAAAAaAA4AAAADAAAAAAAbAA4AAAADAAAAAAAcAA4AAAADAAAAAAAdAA4AAAADAAAAAAAeAA4AAAADAAAAAAAfAA4AAAADAAAAAAAgAA4AAAADAAAAAAAhAA4AAAADAAAAAAAiAA4AAAADAAAAAAAjAA4AAAADAAAAAAAkAA4AAAADAAAAAAAlAA4AAAADAAAAAAAmAA4AAAADAAAAAAAnAA4AAAADAAAAAAAoAA4AAAADAAAAAAApAA4AAAADAAAAAAAqAA4AAAADAAAAAAArAA4AAAADAAAAAAAsAA4AAAADAAAAAAAtAA4AAAADAAAAAAAuAA4AAAADAAAAAAAvAA4AAAADAAAAAAAwAA4AAAADAAAAAAAxAA4AAAADAAAAAAAyAA4AAAADAAAAAAAzAA4AAAADAAAAAAA0AA4AAAADAAAAAAA1AA4AAAADAAAAAAA2AA4AAAADAAAAAAA3AA4AAAADAAAAAAA4AA4AAAADAAAAAAA5AA4AAAADAAAAAAA6AA4AAAADAAAAAAA7AA4AAAADAAAAAAA8AA4AAAADAAAAAAA9AA4AAAADAAAAAAA+AA4AAAADAAAAAAA/AA4AAAADAAAAAABAAA4AAAADAAAAAABBAA4AAAADAAAAAABCAA4AAAADAAAAAABDAA4AAAADAAAAAABEAA4AAAADAAAAAABFAA4AAAADAAAAAABGAA4AAAADAAAAAABHAA4AAAADAAAAAABIAA4AAAADAAAAAABJAA4AAAADAAAAAABKAA4AAAADAAAAAABLAA4AAAADAAAAAABMAA4AAAADAAAAAABNAA4AAAADAAAAAABOAA4AAAADAAAAAABPAA4AAAADAAAAAABQAA4AAAADAAAAAABRAA4AAAADAAAAAABSAA4AAAADAAAAAABTAA4AAAADAAAAAABUAA4AAAADAAAAAABVAA4AAAADAAAAAABWAA4AAAADAAAAAABXAA4AAAADAAAAAABYAA4AAAADAAAAAABZAA4AAAADAAAAAABaAA4AAAADAAAAAABbAA4AAAADAAAAAABcAA4AAAADAAAAAABdAA4AAAADAAAAAABeAA4AAAADAAAAAABfAA4AAAADAAAAAABgAA4AAAADAAAAAABhAA4AAAADAAAAAABiAA4AAAADAAAAAABjAA4AAAADAAAAAABkAA4AAAADAAAAAABlAA4AAAADAAAAAABmAA4AAAADAAAAAABnAA4AAAADAAAAAABoAA4AAAADAAAAAABpAA4AAAADAAAAAABqAA4AAAADAAAAAABrAA4AAAADAAAAAABsAA4AAAADAAAAAABtAA4AAAADAAAAAABuAA4AAAADAAAAAABvAA4AAAADAAAAAABwAA4AAAADAAAAAABxAA4AAAADAAAAAAByAA4AAAADAAAAAABzAA4AAAADAAAAAAB0AA4AAAADAAAAAAB1AA4AAAADAAAAAAB2AA4AAAADAAAAAAB3AA4AAAADAAAAAAB4AA4AAAADAAAAAAB5AA4AAAADAAAAAAB6AA4AAAADAAAAAAB7AA4AAAADAAAAAAB8AA4AAAADAAAAAAB9AA4AAAADAAAAAAB+AA4AAAADAAAAAAB/AA4AAAADAAAAAACAAA4AAAADAAAAAACBAA4AAAADAAAAAACCAA4AAAADAAAAAACDAA4AAAADAAAAAACEAA4AAAADAAAAAACFAA4AAAADAAAAAACGAA4AAAADAAAAAACHAA4AAAADAAAAAAA=")
-tile_set = SubResource("TileSet_tefeu")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
@@ -189,6 +53,20 @@ offset_right = 593.0
 offset_bottom = 126.0
 text = "as a candle, you need to bring the light"
 label_settings = SubResource("LabelSettings_jyhfs")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(100, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(-142, 190)
+shape = SubResource("WorldBoundaryShape2D_sugp2")
+
+[node name="ColorRect" type="ColorRect" parent="Ground"]
+offset_left = -1002.0
+offset_top = 290.0
+offset_right = 2489.0
+offset_bottom = 635.0
+color = Color(0.20880066, 0.10438138, 0.010155321, 1)
 
 [node name="Label3" type="Label" parent="."]
 offset_left = 1103.0
