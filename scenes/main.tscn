@@ -11,8 +11,8 @@ size = Vector2(119, 120)
 font = ExtResource("3_sugp2")
 font_size = 30
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sugp2"]
-distance = -95.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sugp2"]
+size = Vector2(3539, 361)
 
 [node name="Main" type="Node"]
 
@@ -36,6 +36,7 @@ offset_left = -920.0
 offset_top = -715.0
 offset_right = 2575.0
 offset_bottom = 615.0
+scale = Vector2(1.6148179, 1.0517056)
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
@@ -58,8 +59,8 @@ label_settings = SubResource("LabelSettings_jyhfs")
 position = Vector2(100, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2(-142, 190)
-shape = SubResource("WorldBoundaryShape2D_sugp2")
+position = Vector2(741.5, 465.5)
+shape = SubResource("RectangleShape2D_sugp2")
 
 [node name="ColorRect" type="ColorRect" parent="Ground"]
 offset_left = -1002.0
@@ -68,10 +69,33 @@ offset_right = 2489.0
 offset_bottom = 635.0
 color = Color(0.20880066, 0.10438138, 0.010155321, 1)
 
+[node name="Ground2" type="StaticBody2D" parent="."]
+position = Vector2(3463.0002, -5)
+scale = Vector2(0.33156213, 1.0101349)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground2"]
+position = Vector2(-129.45264, 471.50006)
+shape = SubResource("RectangleShape2D_sugp2")
+
+[node name="ColorRect" type="ColorRect" parent="Ground2"]
+offset_left = -1872.9526
+offset_top = 296.00006
+offset_right = 1618.0474
+offset_bottom = 641.00006
+color = Color(0.20880066, 0.10438138, 0.010155321, 1)
+
 [node name="Label3" type="Label" parent="."]
 offset_left = 1103.0
 offset_top = 90.0
 offset_right = 1563.0
 offset_bottom = 126.0
 text = "but know that sometimes, getting home means making a sacrifice"
+label_settings = SubResource("LabelSettings_jyhfs")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 2837.0
+offset_top = 88.0
+offset_right = 3614.0
+offset_bottom = 124.0
+text = "good job... the path home is littered with many challenges"
 label_settings = SubResource("LabelSettings_jyhfs")
