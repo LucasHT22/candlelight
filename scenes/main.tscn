@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=4 uid="uid://155xx7s6y6ta"]
+[gd_scene load_steps=102 format=4 uid="uid://155xx7s6y6ta"]
 
 [ext_resource type="Script" uid="uid://bxn66htsrwnhn" path="res://scripts/tobias.gd" id="1_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://dvfltq0j47px3" path="res://assets/final/idle.png" id="2_tefeu"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://1x2ax1bk5qsd" path="res://assets/final/plant 2.png" id="13_jkv2x"]
 [ext_resource type="Texture2D" uid="uid://b2l3j21b22yhy" path="res://assets/final/plant 1.png" id="14_jbj1t"]
 [ext_resource type="AudioStream" uid="uid://ci2mo3c7ag3y6" path="res://assets/tobias_theme.wav" id="15_jkv2x"]
+[ext_resource type="AudioStream" uid="uid://bogh37owvwyvb" path="res://assets/spring_night.wav" id="16_jbj1t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_85g3d"]
 atlas = ExtResource("2_tefeu")
@@ -859,6 +860,10 @@ shape = SubResource("RectangleShape2D_yc10j")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_jkv2x")
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_jbj1t")
 autoplay = true
 
 [connection signal="body_entered" from="Tobias/Area2D" to="Tobias" method="_on_area_2d_body_entered"]
