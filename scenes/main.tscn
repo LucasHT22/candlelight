@@ -4,10 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dvfltq0j47px3" path="res://assets/final/idle.png" id="2_tefeu"]
 [ext_resource type="Texture2D" uid="uid://dflqnq28b1tj2" path="res://assets/final/jump.png" id="3_o6xl0"]
 [ext_resource type="FontFile" uid="uid://t3k6vsgfdjrl" path="res://assets/Creepster-Regular.ttf" id="3_sugp2"]
-<<<<<<< HEAD
 [ext_resource type="Script" path="res://scripts/puddle.gd" id="4_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://27as8ox0b5ru" path="res://assets/final/walk right.png" id="4_tipki"]
-=======
 [ext_resource type="Script" uid="uid://c6yi1i3f6ak22" path="res://scripts/puddle.gd" id="4_jyhfs"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jyhfs"]
@@ -41,7 +39,6 @@ region = Rect2(96, 0, 32, 33)
 [sub_resource type="AtlasTexture" id="AtlasTexture_tipki"]
 atlas = ExtResource("2_sugp2")
 region = Rect2(128, 0, 32, 33)
->>>>>>> 054f8288e4056c877ef1e0328ed165782016f895
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_85g3d"]
 atlas = ExtResource("2_tefeu")
@@ -485,6 +482,7 @@ font = ExtResource("3_sugp2")
 font_size = 30
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sugp2"]
 size = Vector2(3539, 361)
 
@@ -493,6 +491,11 @@ size = Vector2(11, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tefeu"]
 size = Vector2(5398, 199)
+=======
+[sub_resource type="LabelSettings" id="LabelSettings_tbgi4"]
+font = ExtResource("3_sugp2")
+font_size = 32
+>>>>>>> 82e28aa8c64c226fe36880863d48078d146d15b7
 
 [node name="Main" type="Node"]
 
@@ -596,9 +599,11 @@ shape = SubResource("RectangleShape2D_tefeu")
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.08, 0.08, 0.012, 1)
 
-[node name="Tobias" type="CharacterBody2D" parent="." groups=["player"]]
+[node name="Tobias" type="CharacterBody2D" parent="." node_paths=PackedStringArray("flame_light", "flame_energy_label") groups=["player"]]
 collision_mask = 3
 script = ExtResource("1_0wfyh")
+flame_light = NodePath("FlameLight")
+flame_energy_label = NodePath("../UI/Wax")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tobias"]
 scale = Vector2(3.5, 3.5)
@@ -648,7 +653,19 @@ offset_bottom = 124.0
 text = "good job... the path home is littered with many challenges"
 label_settings = SubResource("LabelSettings_jyhfs")
 
+<<<<<<< HEAD
 [node name="Bright" type="CanvasLayer" parent="."]
 >>>>>>> 054f8288e4056c877ef1e0328ed165782016f895
+=======
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Wax" type="Label" parent="UI"]
+offset_left = 972.0
+offset_top = 25.0
+offset_right = 1099.0
+offset_bottom = 63.0
+text = "FLAME: 100"
+label_settings = SubResource("LabelSettings_tbgi4")
+>>>>>>> 82e28aa8c64c226fe36880863d48078d146d15b7
 
 [connection signal="body_entered" from="Puddle" to="Puddle" method="_on_body_entered"]

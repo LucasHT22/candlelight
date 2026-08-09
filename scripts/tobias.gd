@@ -1,5 +1,19 @@
 extends CharacterBody2D
 
+signal doused
+
+@export var flame_light: PointLight2D
+@export var flame_energy_label: Label;
+@export var ambient_energy: float = 0.15
+@export var lit_energy: float = 2.5
+@export var lit_duration: float = 1.0
+@export var initial_flame: float = lit_duration * 2
+
+var is_lit: bool = false
+var lit_timer: float = 0.0
+var light_brightness: float = 0;
+var flame_energy = initial_flame;
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -1000.0
 const JUMP_DELAY = 0.5
@@ -7,6 +21,43 @@ const JUMP_DELAY = 0.5
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var is_jumping := false  # true durante o delay + o pulo em si
+
+func douse() -> void:
+	emit_signal("doused")
+	get_tree().reload_current_scene()
+
+func light_up() -> void:
+	if flame_energy > 0:
+		is_lit = true
+		lit_timer = lit_duration
+		flame_light.energy = lit_energy
+
+func _ready() -> void:
+	_set_ambient()
+	
+func _set_ambient() -> void:
+	is_lit = false
+	flame_light.energy = ambient_energy
+	
+func _update_brightness(percent: float) -> void:
+	if flame_energy <= 0:
+		light_brightness = 0
+	else:
+		light_brightness = percent * lit_energy
+	
+	flame_light.energy = light_brightness
+
+func _process(delta: float) -> void:
+	if is_lit:
+		lit_timer -= delta
+		flame_energy -= delta
+		
+		flame_energy_label.text = str(round(flame_energy))
+		
+		_update_brightness(lit_timer / lit_duration)
+			
+	if Input.is_action_pressed("light"):
+		light_up()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
