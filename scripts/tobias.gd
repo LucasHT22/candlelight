@@ -113,3 +113,8 @@ func update_animation(direction: float) -> void:
 	else:
 		if animated_sprite.animation != "idle":
 			animated_sprite.play("idle")
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("spikes"):
+		get_tree().reload_current_scene()
