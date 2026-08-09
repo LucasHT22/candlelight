@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dvfltq0j47px3" path="res://assets/final/idle.png" id="2_tefeu"]
 [ext_resource type="Texture2D" uid="uid://dflqnq28b1tj2" path="res://assets/final/jump.png" id="3_o6xl0"]
 [ext_resource type="FontFile" uid="uid://t3k6vsgfdjrl" path="res://assets/Creepster-Regular.ttf" id="3_sugp2"]
-[ext_resource type="Script" path="res://scripts/puddle.gd" id="4_jyhfs"]
+[ext_resource type="Script" uid="uid://c6yi1i3f6ak22" path="res://scripts/puddle.gd" id="4_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://27as8ox0b5ru" path="res://assets/final/walk right.png" id="4_tipki"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_85g3d"]
@@ -465,9 +465,11 @@ font_size = 32
 
 [node name="Main" type="Node"]
 
-[node name="Tobias" type="CharacterBody2D" parent="." groups=["player"]]
+[node name="Tobias" type="CharacterBody2D" parent="." node_paths=PackedStringArray("flame_light", "flame_energy_label") groups=["player"]]
 collision_mask = 3
 script = ExtResource("1_0wfyh")
+flame_light = NodePath("FlameLight")
+flame_energy_label = NodePath("../UI/Wax")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tobias"]
 position = Vector2(0.99999994, 0)
