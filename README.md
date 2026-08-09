@@ -1,4 +1,4 @@
-# The light within you
+# Candlelight: the light within you
 
 ## Our prompt
 
@@ -36,5 +36,12 @@ And somewhere beyond all that darkness…
 your people are waiting for you. 
 
 The light you need to find your way home is always with you — but to use it, you have to sacrifice a little of yourself.
+
+## Development
+
+Open the project in Godot 4.5 (GDScript used, C#/mono not needed).
+All assets are included in the repo.
+Press play!
+
 
 ## Core Mechanics
