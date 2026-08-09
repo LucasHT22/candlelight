@@ -4,8 +4,44 @@
 [ext_resource type="Texture2D" uid="uid://dvfltq0j47px3" path="res://assets/final/idle.png" id="2_tefeu"]
 [ext_resource type="Texture2D" uid="uid://dflqnq28b1tj2" path="res://assets/final/jump.png" id="3_o6xl0"]
 [ext_resource type="FontFile" uid="uid://t3k6vsgfdjrl" path="res://assets/Creepster-Regular.ttf" id="3_sugp2"]
+<<<<<<< HEAD
 [ext_resource type="Script" path="res://scripts/puddle.gd" id="4_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://27as8ox0b5ru" path="res://assets/final/walk right.png" id="4_tipki"]
+=======
+[ext_resource type="Script" uid="uid://c6yi1i3f6ak22" path="res://scripts/puddle.gd" id="4_jyhfs"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jyhfs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sugp2"]
+size = Vector2(3539, 361)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbgi4"]
+size = Vector2(11, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sugp2"]
+atlas = ExtResource("2_sugp2")
+region = Rect2(0, 0, 32, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyhfs"]
+atlas = ExtResource("2_sugp2")
+region = Rect2(0, 0, 32, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbgi4"]
+atlas = ExtResource("2_sugp2")
+region = Rect2(32, 0, 32, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tefeu"]
+atlas = ExtResource("2_sugp2")
+region = Rect2(64, 0, 32, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6xl0"]
+atlas = ExtResource("2_sugp2")
+region = Rect2(96, 0, 32, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tipki"]
+atlas = ExtResource("2_sugp2")
+region = Rect2(128, 0, 32, 33)
+>>>>>>> 054f8288e4056c877ef1e0328ed165782016f895
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_85g3d"]
 atlas = ExtResource("2_tefeu")
@@ -434,10 +470,21 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyhfs"]
 size = Vector2(77, 112)
 
+[sub_resource type="Gradient" id="Gradient_jyhfs"]
+offsets = PackedFloat32Array(0, 0.96666664)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tbgi4"]
+gradient = SubResource("Gradient_jyhfs")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
 [sub_resource type="LabelSettings" id="LabelSettings_jyhfs"]
 font = ExtResource("3_sugp2")
 font_size = 30
 
+<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sugp2"]
 size = Vector2(3539, 361)
 
@@ -467,6 +514,10 @@ position_smoothing_speed = 6.0
 position = Vector2(-0.5, -5)
 shape = SubResource("RectangleShape2D_jyhfs")
 
+=======
+[node name="Main" type="Node"]
+
+>>>>>>> 054f8288e4056c877ef1e0328ed165782016f895
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
 offset_left = -923.0
@@ -476,23 +527,8 @@ offset_bottom = 718.0
 scale = Vector2(1.6148179, 1.0517056)
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="."]
-offset_left = -190.0
-offset_top = 94.0
-offset_right = 15.0
-offset_bottom = 130.0
-text = "you are far from home..."
-label_settings = SubResource("LabelSettings_jyhfs")
-
-[node name="Label2" type="Label" parent="."]
-offset_left = 312.0
-offset_top = 90.0
-offset_right = 593.0
-offset_bottom = 126.0
-text = "as a candle, you need to bring the light"
-label_settings = SubResource("LabelSettings_jyhfs")
-
 [node name="Ground" type="StaticBody2D" parent="."]
+material = SubResource("CanvasItemMaterial_jyhfs")
 position = Vector2(100, 0)
 collision_layer = 2
 
@@ -501,6 +537,7 @@ position = Vector2(741.5, 465.5)
 shape = SubResource("RectangleShape2D_sugp2")
 
 [node name="ColorRect" type="ColorRect" parent="Ground"]
+use_parent_material = true
 offset_left = -1002.0
 offset_top = 290.0
 offset_right = 2489.0
@@ -523,22 +560,6 @@ offset_right = 1618.0474
 offset_bottom = 641.00006
 color = Color(0.20880066, 0.10438138, 0.010155321, 1)
 
-[node name="Label3" type="Label" parent="."]
-offset_left = 1103.0
-offset_top = 90.0
-offset_right = 1563.0
-offset_bottom = 126.0
-text = "but know that sometimes, getting home means making a sacrifice"
-label_settings = SubResource("LabelSettings_jyhfs")
-
-[node name="Label4" type="Label" parent="."]
-offset_left = 2837.0
-offset_top = 88.0
-offset_right = 3614.0
-offset_bottom = 124.0
-text = "good job... the path home is littered with many challenges"
-label_settings = SubResource("LabelSettings_jyhfs")
-
 [node name="Puddle" type="Area2D" parent="."]
 z_index = 5
 position = Vector2(3442, 228)
@@ -558,6 +579,7 @@ offset_right = 404.0
 offset_bottom = 72.0
 color = Color(0.24779189, 0.14420357, 0.99999994, 1)
 
+<<<<<<< HEAD
 [node name="Ground3 (temp)" type="StaticBody2D" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="Ground3 (temp)"]
@@ -570,5 +592,63 @@ color = Color(0.20784314, 0.105882354, 0.011764706, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground3 (temp)"]
 position = Vector2(2510, 590.5)
 shape = SubResource("RectangleShape2D_tefeu")
+=======
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.08, 0.08, 0.012, 1)
+
+[node name="Tobias" type="CharacterBody2D" parent="." groups=["player"]]
+collision_mask = 3
+script = ExtResource("1_0wfyh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tobias"]
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_0wfyh")
+animation = &"idle"
+
+[node name="Camera2D" type="Camera2D" parent="Tobias"]
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tobias"]
+shape = SubResource("RectangleShape2D_jyhfs")
+
+[node name="FlameLight" type="PointLight2D" parent="Tobias"]
+texture = SubResource("GradientTexture2D_tbgi4")
+texture_scale = 10.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = -190.0
+offset_top = 94.0
+offset_right = 91.0
+offset_bottom = 130.0
+text = "you are far from home..."
+label_settings = SubResource("LabelSettings_jyhfs")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 312.0
+offset_top = 90.0
+offset_right = 772.0
+offset_bottom = 126.0
+text = "as a candle, you need to bring the light"
+label_settings = SubResource("LabelSettings_jyhfs")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 1103.0
+offset_top = 90.0
+offset_right = 1880.0
+offset_bottom = 126.0
+text = "but know that sometimes, getting home means making a sacrifice"
+label_settings = SubResource("LabelSettings_jyhfs")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 2837.0
+offset_top = 88.0
+offset_right = 3614.0
+offset_bottom = 124.0
+text = "good job... the path home is littered with many challenges"
+label_settings = SubResource("LabelSettings_jyhfs")
+
+[node name="Bright" type="CanvasLayer" parent="."]
+>>>>>>> 054f8288e4056c877ef1e0328ed165782016f895
 
 [connection signal="body_entered" from="Puddle" to="Puddle" method="_on_body_entered"]
