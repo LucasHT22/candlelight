@@ -256,9 +256,10 @@ color = Color(0.24779189, 0.14420357, 0.99999994, 1)
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.08, 0.08, 0.012, 1)
 
-[node name="Tobias" type="CharacterBody2D" parent="." groups=["player"]]
+[node name="Tobias" type="CharacterBody2D" parent="." node_paths=PackedStringArray("flame_light") groups=["player"]]
 collision_mask = 3
 script = ExtResource("1_0wfyh")
+flame_light = NodePath("FlameLight")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tobias"]
 scale = Vector2(3.5, 3.5)
