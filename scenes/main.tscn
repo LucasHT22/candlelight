@@ -747,7 +747,6 @@ position = Vector2(2510, 590.5)
 shape = SubResource("RectangleShape2D_tefeu")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.08, 0.08, 0.012, 1)
 
 [node name="Label" type="Label" parent="."]

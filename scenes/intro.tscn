@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3pqpeiysf2nc"]
+
+[ext_resource type="VideoStream" uid="uid://c72otlbxtsc75" path="res://assets/copy_7EC3A04B-342B-4555-96C0-40038674669F.ogv" id="1_yjqpq"]
+[ext_resource type="Script" uid="uid://cf2uo2sk4ctwu" path="res://scripts/video_stream_player.gd" id="2_4bx60"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 1458.5713
+offset_bottom = 902.8571
+scale = Vector2(0.7, 0.7)
+stream = ExtResource("1_yjqpq")
+autoplay = true
+script = ExtResource("2_4bx60")
