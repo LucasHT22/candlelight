@@ -1,6 +1,7 @@
 [gd_scene load_steps=71 format=3 uid="uid://155xx7s6y6ta"]
 
 [ext_resource type="Script" uid="uid://bxn66htsrwnhn" path="res://scripts/tobias.gd" id="1_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://8vtnbcl7c46e" path="res://assets/candle-walk-grid.jpeg" id="2_sugp2"]
 [ext_resource type="Texture2D" uid="uid://dvfltq0j47px3" path="res://assets/final/idle.png" id="2_tefeu"]
 [ext_resource type="Texture2D" uid="uid://dflqnq28b1tj2" path="res://assets/final/jump.png" id="3_o6xl0"]
 [ext_resource type="FontFile" uid="uid://t3k6vsgfdjrl" path="res://assets/Creepster-Regular.ttf" id="3_sugp2"]
