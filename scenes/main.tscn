@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://155xx7s6y6ta"]
+[gd_scene load_steps=35 format=3 uid="uid://155xx7s6y6ta"]
 
 [ext_resource type="Script" uid="uid://bxn66htsrwnhn" path="res://scripts/tobias.gd" id="1_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://8vtnbcl7c46e" path="res://assets/candle-walk-grid.jpeg" id="2_sugp2"]
@@ -190,6 +190,10 @@ fill_to = Vector2(1, 0.5)
 font = ExtResource("3_sugp2")
 font_size = 30
 
+[sub_resource type="LabelSettings" id="LabelSettings_tbgi4"]
+font = ExtResource("3_sugp2")
+font_size = 32
+
 [node name="Main" type="Node"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -256,10 +260,11 @@ color = Color(0.24779189, 0.14420357, 0.99999994, 1)
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.08, 0.08, 0.012, 1)
 
-[node name="Tobias" type="CharacterBody2D" parent="." node_paths=PackedStringArray("flame_light") groups=["player"]]
+[node name="Tobias" type="CharacterBody2D" parent="." node_paths=PackedStringArray("flame_light", "flame_energy_label") groups=["player"]]
 collision_mask = 3
 script = ExtResource("1_0wfyh")
 flame_light = NodePath("FlameLight")
+flame_energy_label = NodePath("../UI/Wax")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tobias"]
 scale = Vector2(3.5, 3.5)
@@ -309,6 +314,14 @@ offset_bottom = 124.0
 text = "good job... the path home is littered with many challenges"
 label_settings = SubResource("LabelSettings_jyhfs")
 
-[node name="Bright" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Wax" type="Label" parent="UI"]
+offset_left = 972.0
+offset_top = 25.0
+offset_right = 1099.0
+offset_bottom = 63.0
+text = "FLAME: 100"
+label_settings = SubResource("LabelSettings_tbgi4")
 
 [connection signal="body_entered" from="Puddle" to="Puddle" method="_on_body_entered"]
