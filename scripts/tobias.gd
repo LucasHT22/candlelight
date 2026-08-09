@@ -20,7 +20,7 @@ const JUMP_DELAY = 0.5
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-var is_jumping := false  # true durante o delay + o pulo em si
+var is_jumping := false
 
 func douse() -> void:
 	emit_signal("doused")
