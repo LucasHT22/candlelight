@@ -1,5 +1,7 @@
 # Candlelight: the light within you
 
+<img width="1150" height="648" alt="image" src="https://github.com/user-attachments/assets/a79a02e2-d50b-4a1c-ad6c-1c3d45e4cb5e" />
+
 ## Our prompt
 
 > A distant light may arrive exactly when it is needed
