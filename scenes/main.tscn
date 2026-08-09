@@ -607,5 +607,6 @@ offset_left = 972.0
 offset_top = 25.0
 offset_right = 1099.0
 offset_bottom = 63.0
-text = "FLAME: 100"
 label_settings = SubResource("LabelSettings_tbgi4")
+
+[connection signal="body_entered" from="Puddle" to="Puddle" method="_on_body_entered"]

@@ -6,8 +6,8 @@ signal doused
 @export var flame_energy_label: Label;
 @export var ambient_energy: float = 0.15
 @export var lit_energy: float = 2.5
-@export var lit_duration: float = 1.0
-@export var initial_flame: float = lit_duration * 2
+@export var lit_duration: float = 1.5
+@export var initial_flame: float = lit_duration * 20
 
 var is_lit: bool = false
 var lit_timer: float = 0.0
@@ -34,6 +34,7 @@ func light_up() -> void:
 
 func _ready() -> void:
 	_set_ambient()
+	_update_label()
 	
 func _set_ambient() -> void:
 	is_lit = false
@@ -46,13 +47,20 @@ func _update_brightness(percent: float) -> void:
 		light_brightness = percent * lit_energy
 	
 	flame_light.energy = light_brightness
+	
+	if light_brightness <= 0:
+		light_brightness = 0
+		is_lit = false
+
+func _update_label() -> void:
+	flame_energy_label.text = "Flame: " + str(int(round(flame_energy)))
 
 func _process(delta: float) -> void:
 	if is_lit:
 		lit_timer -= delta
 		flame_energy -= delta
 		
-		flame_energy_label.text = str(round(flame_energy))
+		_update_label()
 		
 		_update_brightness(lit_timer / lit_duration)
 			
