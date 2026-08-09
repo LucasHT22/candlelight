@@ -482,8 +482,6 @@ fill_to = Vector2(1, 0.5)
 font = ExtResource("3_sugp2")
 font_size = 30
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sugp2"]
 size = Vector2(3539, 361)
 
@@ -492,11 +490,10 @@ size = Vector2(11, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tefeu"]
 size = Vector2(5398, 199)
-=======
+
 [sub_resource type="LabelSettings" id="LabelSettings_tbgi4"]
 font = ExtResource("3_sugp2")
 font_size = 32
->>>>>>> 82e28aa8c64c226fe36880863d48078d146d15b7
 
 [node name="Main" type="Node"]
 
